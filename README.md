@@ -10,8 +10,8 @@
   - 登録と閲覧の画面作成
 
 ##③DEMO
-- 
-
+- https://tofu05.github.io/kadai08_db1/
+  
 ##④作成アプリのIDまたはPW
 - ID/PASSなし
 
