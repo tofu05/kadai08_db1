@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24C101" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="TangoBook" representedClassName="TangoBook" syncable="YES" codeGenerationType="class">
+        <attribute name="last_studied" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="study_count" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tangobook_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wotd_count" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="tangowords" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TangoWords" inverseName="tangobook_id" inverseEntity="TangoWords"/>
+    </entity>
+    <entity name="TangoWords" representedClassName=".TangoWords" syncable="YES" codeGenerationType="class">
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="last_studied" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="study_count" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="word_id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="tangobook_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TangoBook" inverseName="tangowords" inverseEntity="TangoBook"/>
+    </entity>
+</model>
